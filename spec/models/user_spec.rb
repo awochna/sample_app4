@@ -87,7 +87,7 @@ describe User do
     let(:found_user) { User.find_by(email: @user.email) }
     
     describe "with valid password" do
-      it { should eq found_user.authenticate(@user.password_digest) }
+      it { should eq found_user.authenticate(@user.password) }
     end
     
     describe "with invalid password" do
@@ -102,4 +102,6 @@ describe User do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
+  
+  User.delete_all
 end
