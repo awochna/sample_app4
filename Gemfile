@@ -28,16 +28,15 @@ group :test do
   gem 'libnotify', '0.8.0'
 end
 
-group :assets do
-  # Use SCSS for stylesheets
-  gem 'sass-rails', '4.0.0.rc1'
+# Use SCSS for stylesheets
+gem 'sass-rails', '4.0.0.rc1'
 
-  # Use Uglifier as compressor for JavaScript assets
-  gem 'uglifier', '1.0.3'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '1.0.3'
 
-  # Use CoffeeScript for .js.coffee assets and views
-  gem 'coffee-rails', '4.0.0'
-end
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '4.0.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
