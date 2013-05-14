@@ -12,10 +12,11 @@ gem 'bootstrap-will_paginate', '0.0.9'
 group :development, :test do
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.7'
-  gem 'rspec-rails', '2.13.0'
+  gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
@@ -23,7 +24,7 @@ group :test do
   gem 'capybara', '2.1.0.beta1'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.3.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', '~> 1.0.0.RC1'
   gem 'rb-inotify', '0.9.0'
   gem 'libnotify', '0.8.0'
 end

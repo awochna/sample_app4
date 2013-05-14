@@ -68,7 +68,9 @@ describe User do
   end
   
   describe "when password is not present" do
-    before { @user.password = @user.password_confirmation = " " }
+    before do
+      @user = User.new(name: "Example User", email: "user@example.com")
+    end
     it { should_not be_valid }
   end
   
@@ -77,8 +79,11 @@ describe User do
     it { should_not be_valid }
   end
   
-  describe "when password confirmation is nil" do
-    before { @user.password_confirmation = nil }
+  describe "when password confirmation is missing" do
+    before do
+      @user = User.new(name: "Example User", email: "user@example.com",
+                       password: "foobar")
+    end
     it { should_not be_valid }
   end
   
@@ -112,6 +117,4 @@ describe User do
       expect(@user.reload.email).to eq mixed_case_email.downcase
     end
   end
-  
-  User.delete_all
 end
